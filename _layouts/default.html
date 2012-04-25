@@ -1,10 +1,46 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print" />
+
+    {% if page.title %}
     <title>{{ page.title }}</title>
+    {% else %}
+    <title>warms0x</title>
+    {% endif %}
   </head>
+
   <body>
-    {{ content }}
+
+    <header>
+      <div class="container">
+        {% if page.title %}
+        <h1>{{ page.title }}</h1>
+        <h2>- by warms0x</h2>
+        {% else %}
+        <h1>warms0x</h1>
+        <h2>on the internet</h2>
+        {% endif %}
+
+        <section id="downloads">
+          <a href="/" class="btn">Home</a>
+          <a href="/contact.html" class="btn">Contact</a>
+          <a href="https://github.com/warms0x" class="btn btn-github"><span class="icon"></span>On GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        {{ content }}
+      </section>
+    </div>
+
+    
   </body>
 </html>
