@@ -26,4 +26,24 @@ from the Tor project.
 
 ## Step 2
 
+In my opinion, the easiest way to scale a hidden web server is to add *more*
+hidden web servers. This can be accomplished with a [load
+balancer](https://en.wikipedia.org/wiki/Load_balancing_(computing)) sitting in
+front of the web servers. In the case of a Hidden Service, you would simply
+point the Hidden Service at the load balancer instead of the web server itself.
+This can offer additional benefits in the way of checking the availability of
+the backend web server or even showing a helpful "sorry the site is down" web
+page.
+
+I've gone ahead and created an example in a repository called
+[scalable-onions](https://github.com/warms0x/scalable-onions) of this
+technique. In the repository I've not included any of the details of setting up
+a Hidden Service, I'll leave that up to the ready him/herself.
+
+
+
+Packages to install:
+
+* haproxy
+* thttpd
 
